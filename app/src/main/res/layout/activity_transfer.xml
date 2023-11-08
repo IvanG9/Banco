@@ -5,6 +5,13 @@
     android:layout_height="match_parent"
     android:layout_margin="16dp">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -77,7 +84,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        android:visibility="gone"
+        />
+
+    <EditText
+        android:id="@+id/editTextCuentaDestino"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Introduce la cuenta de destino"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        />
 
     <TextView
         android:id="@+id/textView3"
@@ -88,10 +112,11 @@
         android:gravity="bottom"
         android:text="Cantidad:"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cmbCuentaDestino" />
+        app:layout_constraintTop_toBottomOf="@+id/guideline"
+        />
 
     <EditText
-        android:id="@+id/editTextEjemplo"
+        android:id="@+id/editTextCantidad"
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:gravity="center"
@@ -104,7 +129,7 @@
 
     <Spinner
         android:id="@+id/cmbOpciones3"
-        android:layout_width="50dp"
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.937"
@@ -113,6 +138,7 @@
         app:layout_constraintWidth_default="wrap"
 
         />
+
 
     <CheckBox
         android:id="@+id/checkboxJustificante"
