@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Bank-ivpelo</string>
+    <string name="hola">Hello</string>
+    <string name="iniciarSesion">Log In</string>
+    <string name="dni">Username</string>
+    <string name="posici_n_global">Global Position</string>
+    <string name="ingresos">Income</string>
+    <string name="transferencias">Transfers</string>
+    <string name="Cambiar_constraseña">Change Password</string>
+    <string name="Promociones">Promotions</string>
+    <string name="Cajeros">ATMs</string>
+    <string name="salir">Exit</string>
+    <string name="inicia_sesi_n">Log In</string>
+    <string name="usuario">User</string>
+    <string name="password">Password</string>
+    <string name="entrar">Enter</string>
+</resources>

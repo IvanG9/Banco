@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Bancoivpelo" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">#3F51B5</item>
+        <item name="colorPrimaryDark">#303F9F</item>
+        <item name="colorAccent">#FF4081</item>
+        <item name="colorSecondary">#FFA726</item>
+    </style>
+
+    <!-- Estilo para CardView -->
+    <style name="CardViewStyle">
+        <item name="cardBackgroundColor">#FFFFFF</item>
+        <item name="cardCornerRadius">8dp</item>
+        <item name="cardElevation">4dp</item>
+    </style>
+
+    <!-- Estilo para BottomAppBar -->
+    <style name="BottomAppBarStyle">
+        <item name="android:layout_gravity">bottom</item>
+    </style>
+
+    <style name="Theme.Bancoivpelo" parent="Base.Theme.Bancoivpelo" />
+</resources>
