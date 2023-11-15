@@ -22,6 +22,12 @@ class MainActivity2 : AppCompatActivity() {
             binding.bienvenida.text = "Bienvenido/a ${cliente.getNombre()}"
         }
 
+        binding.btnIngresos.setOnClickListener {
+            val intent = Intent(this, MovimientosActivity::class.java)
+            intent.putExtra("Cliente", cliente)
+            startActivity(intent)
+        }
+
         binding.btnPosicionGlobal.setOnClickListener {
             val intent = Intent(this, PosicionGlobalActivity::class.java)
             intent.putExtra("Cliente", cliente)

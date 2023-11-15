@@ -7,9 +7,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.banco_ivpelo.R
 import com.example.banco_ivpelo.databinding.ItemAccountBinding
+import com.example.banco_ivpelo.databinding.ItemMovimientosBinding
 import com.example.banco_ivpelo.pojo.Cuenta
+import com.example.banco_ivpelo.pojo.Movimiento
 
-class MovimientosAdapter (private val cuentas: ArrayList<*>?) : RecyclerView.Adapter<MovimientosAdapter.ViewHolder>()  {
+class MovimientosAdapter (private val movimientos: ArrayList<*>?) : RecyclerView.Adapter<MovimientosAdapter.ViewHolder>()  {
 
     private lateinit var context: Context
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -18,26 +20,24 @@ class MovimientosAdapter (private val cuentas: ArrayList<*>?) : RecyclerView.Ada
         return ViewHolder(view)
     }
 
-    override fun getItemCount(): Int = cuentas?.size!!
+    override fun getItemCount(): Int = movimientos?.size!!
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        if (cuentas != null) {
+        if (movimientos != null) {
 
-            val cuenta: Cuenta = cuentas.get(position) as Cuenta
+            val movimiento: Movimiento = movimientos.get(position) as Movimiento
 
             with(holder) {
                 //binding.tvOrder.text = cuenta.toString() Muestra todos los datos de la cuenta
-                binding.textViewAccountName.text = cuenta.getNumeroCuenta()
-                binding.textViewAccountBalance.text = cuenta.getSaldoActual().toString()
+                binding.textviewMovimientoDescripcion.text = movimiento.getDescripcion()
+                binding.textViewMovimientoImporte.text = movimiento.getImporte().toString()
             }
         }
 
     }
-
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val binding = ItemAccountBinding.bind(view)
+        val binding = ItemMovimientosBinding.bind(view)
     }
-
 
 }

@@ -12,7 +12,7 @@ import com.example.banco_ivpelo.databinding.ItemMovimientosBinding
 import com.example.banco_ivpelo.pojo.Cuenta
 import com.example.banco_ivpelo.pojo.Movimiento
 
-class AccountAdapter(private val movimientos: ArrayList<*>?) :
+class AccountAdapter(private val cuentas: ArrayList<*>?) :
     RecyclerView.Adapter<AccountAdapter.ViewHolder>() {
 
     private lateinit var context: Context
@@ -23,23 +23,24 @@ class AccountAdapter(private val movimientos: ArrayList<*>?) :
         return ViewHolder(view)
     }
 
-    override fun getItemCount(): Int = movimientos?.size!!
+    override fun getItemCount(): Int = cuentas?.size!!
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        if (movimientos != null) {
-            val movimiento: Movimiento = movimientos[position] as Movimiento
+    override fun onBindViewHolder(holder: AccountAdapter.ViewHolder, position: Int) {
 
-            with(holder.binding) {
-                // Muestra los datos del movimiento
-                textviewMovimientoDescripcion.text = movimiento.getDescripcion()
-                textViewMovimientoImporte.text = movimiento.getImporte().toString()
+        if (cuentas != null) {
+
+            val cuenta: Cuenta = cuentas.get(position) as Cuenta
+
+            with(holder) {
+                //binding.tvOrder.text = cuenta.toString() Muestra todos los datos de la cuenta
+                binding.textViewAccountName.text = cuenta.getNumeroCuenta()
+                binding.textViewAccountBalance.text = cuenta.getSaldoActual().toString()
             }
-
         }
-    }
 
+    }
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val binding = ItemMovimientosBinding.bind(view)
+        val binding = ItemAccountBinding.bind(view)
     }
 
 }
