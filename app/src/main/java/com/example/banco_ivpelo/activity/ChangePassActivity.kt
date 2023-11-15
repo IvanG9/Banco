@@ -1,4 +1,4 @@
-package com.example.banco_ivpelo
+package com.example.banco_ivpelo.activity
 
 import android.content.Intent
 import android.os.Bundle

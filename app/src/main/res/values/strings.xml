@@ -16,4 +16,10 @@
     <string name="entrar">Entrar</string>
     <string name="repite_la_contrase_a">Repite la contraseña</string>
     <string name="contrase_a">Contraseña</string>
+    <string name="title_activity_posicion_global">posicionGlobal</string>
+    <string name="balance">Balance :</string>
+    <string name="nombre_cuenta">Nombre cuenta :</string>
+    <string name="importe">Importe</string>
+    <string name="descripcion">Descripcion</string>
+    <string name="movimientos">Movimientos</string>
 </resources>
