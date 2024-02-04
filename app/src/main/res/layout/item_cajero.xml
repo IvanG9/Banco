@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_card_height"
+    android:layout_marginHorizontal="@dimen/common_padding_min"
+    android:layout_marginTop="@dimen/common_padding_middle">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageViewBank"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/baseline_account_balance_24" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:layout_toEndOf="@id/imageViewBank"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/textNombreCajero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ATM 1"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textCajeroDireccion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Carrer del Clariano, 1111, 46021 Valencia,Valencia,España" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>
+

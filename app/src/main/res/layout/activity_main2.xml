@@ -64,7 +64,7 @@
             android:drawableLeft="@drawable/baseline_create_24"/>
 
         <Button
-            android:id="@+id/btnOtraOperacion3"
+            android:id="@+id/btnPromociones"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -73,7 +73,7 @@
             />
 
         <Button
-            android:id="@+id/btnOtraOperacion4"
+            android:id="@+id/btnCajeros"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"

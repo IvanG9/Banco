@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.banco_ivpelo.databinding.ActivityMain2Binding
+import com.example.banco_ivpelo.entities.CajeroEntity
 import com.example.banco_ivpelo.pojo.Cliente
 
 
@@ -45,9 +46,14 @@ class MainActivity2 : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.btnCajeros?.setOnClickListener{
+        }
+
         binding.btnSalir.setOnClickListener {
             finish()
         }
+
+
 
     }
 
